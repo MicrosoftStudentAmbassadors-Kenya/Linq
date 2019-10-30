@@ -114,7 +114,8 @@ git commit -m "created a linq project .
 Now we can push our changes to a github remote repository.
 But so far git does not know where to push to. 
 For a **Remote repository** we require the url. and use the format to add as the remote url to our local repository.
-
+Copy the url and use it here
+![image](./images/github.png)
 ```bash
  // run a git push
  // copy the line > git remote add <name> <url>
@@ -122,7 +123,8 @@ For a **Remote repository** we require the url. and use the format to add as the
  // For now use the name as => origin
  // url is the destination of the repo
  // our case url => 
-  git remote add origin  
+
+  git remote add origin  https://github.com/MicrosoftTechCommunity-DeKUT/Linq.git
 
 
 ```
@@ -130,10 +132,12 @@ For a **Remote repository** we require the url. and use the format to add as the
 ```bash
 
 // git push --set-upstream <localbranch> <destinationbranch> 
-git push --set-upstream eduuhlinq eduuhlinq
+git push --set-upstream origin eduuhlinq
 ```
 
 7. One the Push is successful 
 Log in to github and create a pullrequest.
 
 Note: the change will not be accually merged since we are working on the same files. Ofcourse we will have Merge conflicts which will need to be resolved.
+ 
+ Copy the 
