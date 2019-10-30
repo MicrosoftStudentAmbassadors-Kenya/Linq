@@ -8,9 +8,13 @@ ie.
 ### I want to create in temp desktop folder.
 1. Navigate to the folder in file explorer.
 2. Hard to explain this step but do this>
- 
+
+ ![image](./images/pathinexplorer.png)
+
 3. At the highlighted path > replace with cmd and Pless enter.
 You command prompt will open in the path.
+
+![image](./images/cmdpath.png)
 
 4. Proceed to creating the new project. 
 >  **-o** is a flag for => **output**  and Linq is the output location.
@@ -50,6 +54,12 @@ with vscode from the same command prompt using.
  ```CSharp
     obj
     bin
+ ```
+ > # Pull the changes available in github to your local machine.
+ ```bash
+ // will pull any changes available in the remote repository.
+ // git pull => git fetch and git merge
+    git pull 
  ```
 ## (What to do). In visual studio code
  1. Create a new branch and name it *{youname}linq** 
@@ -99,3 +109,31 @@ git add .
 git commit -m "created a linq project .
  created a ingredient Class and Initialized an array of Ingredient object " 
 ```
+
+5. Git status to ensure you are working in a clean tree.
+Now we can push our changes to a github remote repository.
+But so far git does not know where to push to. 
+For a **Remote repository** we require the url. and use the format to add as the remote url to our local repository.
+
+```bash
+ // run a git push
+ // copy the line > git remote add <name> <url>
+ // We replace place holders with the require values
+ // For now use the name as => origin
+ // url is the destination of the repo
+ // our case url => 
+  git remote add origin  
+
+
+```
+6. Push the local branch to the remote repository
+```bash
+
+// git push --set-upstream <localbranch> <destinationbranch> 
+git push --set-upstream eduuhlinq eduuhlinq
+```
+
+7. One the Push is successful 
+Log in to github and create a pullrequest.
+
+Note: the change will not be accually merged since we are working on the same files. Ofcourse we will have Merge conflicts which will need to be resolved.
