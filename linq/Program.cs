@@ -1,4 +1,5 @@
 ﻿using System;
+using linq.services;
 
 namespace linq
 {
@@ -7,23 +8,13 @@ namespace linq
     static void Main(string[] args)
     {
 
-     Ingredient[] ingredients =
-     {
-     new Ingredient{Name = "Sugar", Calories=500},
-     new Ingredient{Name = "Egg", Calories=100},
-     new Ingredient{Name = "Milk", Calories=150},
-     new Ingredient{Name = "Flour", Calories=50},
-     new Ingredient{Name = "Butter", Calories=200}
-     };
-
-        
+    var repo = new IngredientRepository() ;
+    Console.WriteLine(repo.GetbyId(1).Name);
 
 
-      foreach (var item in ingredients)
-      {
-          System.Console.WriteLine($"Name {item.Name}  Name {item.Calories}");
-      }
- 
+
+
+
 
       Console.Read();
     }

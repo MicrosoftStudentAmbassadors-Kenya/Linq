@@ -5,5 +5,6 @@ namespace linq
   {
   public string Name { get; set; }
   public int Calories { get; set; }
+  public int Id { get; set; }
   }
 }
